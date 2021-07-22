@@ -1,7 +1,7 @@
 class DirectorController < ApplicationController
   def director
-    @directors_arr = Director
-    
+    @directors_arr = Director.all
+
       
     render(:template => "/misc_templates/all_dir.html.erb")
   end

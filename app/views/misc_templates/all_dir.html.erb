@@ -1,3 +1,49 @@
-all directors
+<h1>all directors</h1>
+<table border="1">
+  <tr>
+    <th>
+      ID
+    </th>
 
-<%=@directors_arr%>
+    <th>
+      Image
+    </th>
+
+    <th>
+      Name
+    </th>
+
+    <th>
+      Dob
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+
+<%@directors_arr.each do |direct| %>
+  <tr>
+    <td>
+      <%=direct.id%>
+    </td>
+
+    <td>
+      <img src=<%=direct.image%> style="width:250px;">
+    </td>
+
+    <td>
+      <%=direct.name%>
+    </td>
+
+    <td>
+      <%=direct.dob%>
+    </td>
+
+    <td>
+      <a href="/directors/4027">
+        Show details
+      </a>
+    </td>
+  </tr>
+<%end%>
