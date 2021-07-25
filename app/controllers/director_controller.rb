@@ -6,7 +6,8 @@ class DirectorController < ApplicationController
     render(:template => "/misc_templates/all_dir.html.erb")
   end
   def details
-    @dir_id = params.fetch("id")
+    @dir_id = params.fetch("dir_id").to_i
+    
     render(:template => "/misc_templates/direct_details.html.erb")
   end
   def youngest

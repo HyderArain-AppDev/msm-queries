@@ -1,5 +1,5 @@
   <head>
-    <title>Target MSM Queries</title>
+    <title>Director Details</title>
     <meta name="csrf-param" content="authenticity_token" />
 <meta name="csrf-token" content="BgqVwDDPJkW0CE5SMbJltm6nMsBltj39z8K1fbXPbKuLDMDdr4m0DG/FGeo/hhMN+Csn06a9tz0D3mN+5mf8Jg==" />
 
@@ -103,11 +103,11 @@
 
   <tr>
     <td>
-      <%=Movie.where({:director_id => @dir_id}).at(0).id%>
+      <%#Movie.where({:director_id => @dir_id}).at(0).id%>
     </td>
 
     <td>
-      <img src="h<%=Movie.where({:director_id => @dir_id}).at(0).image%>" style="width:250px;">
+      <img src="<%=Movie.where({:director_id => @dir_id}).at(0).image%>" style="width:250px;">
     </td>
 
     <td>
