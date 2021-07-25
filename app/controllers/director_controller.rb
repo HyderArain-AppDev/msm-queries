@@ -5,6 +5,10 @@ class DirectorController < ApplicationController
       
     render(:template => "/misc_templates/all_dir.html.erb")
   end
+  def details
+    @dir_id = params.fetch("id")
+    render(:template => "/misc_templates/direct_details.html.erb")
+  end
   def youngest
     render(:template => "/misc_templates/young_dir.html.erb")
   end
