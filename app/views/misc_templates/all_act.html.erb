@@ -1,1 +1,49 @@
-all actors
+<h2>all actors</h2>
+<table border="1">
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Image
+    </th>
+
+    <th>
+      Name
+    </th>
+
+    <th>
+      Dob
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+
+<%Actor.all.each do |act| %>
+  <tr>
+    <td>
+      <%=act.id%>
+    </td>
+
+    <td>
+      <img src="<%=act.image%>" style="width:250px;">
+    </td>
+
+    <td>
+      <%=act.name%>
+    </td>
+
+    <td>
+      <%=act.dob%>
+    </td>
+
+    <td>
+      <a href="/directors/<%=act.id%>">
+        Show details
+      </a>
+    </td>
+  </tr>
+<%end%>
