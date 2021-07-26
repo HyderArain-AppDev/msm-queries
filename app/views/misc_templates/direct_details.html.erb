@@ -100,34 +100,35 @@
     <th>
     </th>
   </tr>
+  <%@the_movies.each do |movie|%>
+    <tr>
+      <td>
+        <%=movie.id%>
+      </td>
 
-  <tr>
-    <td>
-      <%#Movie.where({:director_id => @dir_id}).at(0).id%>
-    </td>
+      <td>
+        <img src="<%=movie.image%>" style="width:250px;">
+      </td>
 
-    <td>
-      <img src="<%=Movie.where({:director_id => @dir_id}).at(0).image%>" style="width:250px;">
-    </td>
+      <td>
+        <%=movie.title%>
+      </td>
 
-    <td>
-      <%=Movie.where({:director_id => @dir_id}).at(0).title%>
-    </td>
+      <td>
+        <%=movie.year%>
+      </td>
 
-    <td>
-      <%=Movie.where({:director_id => @dir_id}).at(0).year%>
-    </td>
+      <td>
+        <%=Director.where({:id => movie.director_id}).at(0).name%>
+      </td>
 
-    <td>
-      <%=Director.where({:id => @dir_id}).at(0).name%>
-    </td>
-
-    <td>
-      <a href="/movies/<%=Movie.where({:director_id => @dir_id}).at(0).id%>">
-        Show details
-      </a>
-    </td>
-  </tr>
+      <td>
+        <a href="/movies/<%=movie.id%>">
+          Show details
+        </a>
+      </td>
+    </tr>
+  <%end%>
 </table>
 
   </body>
